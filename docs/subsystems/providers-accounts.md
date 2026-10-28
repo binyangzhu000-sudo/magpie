@@ -13,6 +13,12 @@ Plugin ownership of the deprecated built-in subscriptions is in
 [Provider and plugin ownership](provider-plugins.md). How the gateway orders
 keys and accounts per request is in [Gateway routing and fallback](gateway-routing.md).
 
+Atlas Cloud is a key-based relay preset in [`presets.go`](../../internal/provider/presets.go).
+Its Chat Completions and Responses APIs use `https://api.atlascloud.ai/v1`; its
+Anthropic-compatible Messages API uses `https://api.atlascloud.ai`. Model
+discovery reads its public `/v1/models`. It uses the normal provider path, with
+no plugin or separate sign-in.
+
 ## Responsibilities and sources of truth
 
 | Part | Responsibility | Source |

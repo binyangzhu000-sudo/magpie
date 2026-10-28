@@ -527,6 +527,11 @@ var presets = []PresetDef{
 	{ID: "aihubmix", Name: "AiHubMix", Icon: "aihubmix-color", Kind: KindRelay,
 		Chat: "https://aihubmix.com/v1", Anthropic: "https://aihubmix.com",
 		Website: "https://aihubmix.com", KeysURL: "https://console.aihubmix.com/token"},
+	// Atlas Cloud's gateway: chat, Responses and Anthropic Messages on one
+	// host, a key from its console; /v1/models is public
+	{ID: "atlascloud", Name: "Atlas Cloud", Icon: "atlascloud", Kind: KindRelay,
+		Chat: "https://api.atlascloud.ai/v1", Responses: "https://api.atlascloud.ai/v1", Anthropic: "https://api.atlascloud.ai",
+		Website: "https://www.atlascloud.ai/docs", KeysURL: "https://console.atlascloud.ai/api-keys"},
 	// one key for every vendor's models: Chat on its converter, which
 	// takes any of them; GPT on its own Responses API and Claude on its
 	// own Messages API, each of which serves its family alone (the
